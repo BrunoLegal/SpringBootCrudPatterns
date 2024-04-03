@@ -3,6 +3,8 @@ package com.finan.orcamento.model;
 import com.finan.orcamento.model.enums.IcmsEstados;
 import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
@@ -10,7 +12,10 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 
+
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="orcamento")
 public class OrcamentoModel implements Serializable {
     @Id
