@@ -9,7 +9,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 
 
@@ -37,7 +36,7 @@ public class OrcamentoModel implements Serializable {
     private UsuarioModel usuario;
 
     @Column(name="qtd_itens")
-    private BigInteger qtdItens;
+    private int qtdItens;
 
     @Column(name="desconto_orcamento")
     private BigDecimal descontoOrcamento;
@@ -83,15 +82,20 @@ public class OrcamentoModel implements Serializable {
         this.usuario = usuario;
     }
 
-    public BigInteger getQtdItens() {
+    public int getQtdItens() {
         return qtdItens;
     }
 
-    public void setQtdItens(BigInteger qtdItens) {
+    public void setQtdItens(int qtdItens) {
         this.qtdItens = qtdItens;
     }
 
     public BigDecimal getDescontoOrcamento() {
+        try{
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
         return descontoOrcamento;
     }
 
