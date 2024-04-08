@@ -91,6 +91,11 @@ public class OrcamentoModel implements Serializable {
     }
 
     public BigDecimal getDescontoOrcamento() {
+        try{
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
         return descontoOrcamento;
     }
 
