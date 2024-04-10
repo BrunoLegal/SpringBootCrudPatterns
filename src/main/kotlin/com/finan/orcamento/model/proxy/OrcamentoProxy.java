@@ -8,7 +8,7 @@ public class OrcamentoProxy extends OrcamentoModel {
     private BigDecimal descontoOrcamento;
     private OrcamentoModel orcamentoModel;
 
-    public OrcamentoProxy(BigDecimal descontoOrcamento, OrcamentoModel orcamentoModel){
+    public OrcamentoProxy( OrcamentoModel orcamentoModel){
         this.descontoOrcamento = descontoOrcamento;
         this.orcamentoModel = orcamentoModel;
     }
