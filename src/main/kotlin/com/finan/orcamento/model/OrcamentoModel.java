@@ -140,13 +140,4 @@ public class OrcamentoModel implements Serializable {
         this.valorICMS = this.icmsEstados.getStrategy().calcular(this.valorOrcamento);
     }
 
-    public OrcamentoModel(Long id, IcmsEstados icmsEstados, @NotNull BigDecimal valorOrcamento, BigDecimal valorICMS, UsuarioModel usuario, int qtdItens, BigDecimal descontoOrcamento) {
-        this.id = id;
-        this.icmsEstados = icmsEstados;
-        this.valorOrcamento = valorOrcamento;
-        this.valorICMS = valorICMS;
-        this.usuario = usuario;
-        this.qtdItens = qtdItens;
-        this.descontoOrcamento = descontoOrcamento;
-    }
 }
