@@ -42,11 +42,6 @@ public class OrcamentoModel implements Serializable {
     private BigDecimal descontoOrcamento;
 
     public Long getId() {
-        try{
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
         return id;
     }
 
@@ -55,11 +50,6 @@ public class OrcamentoModel implements Serializable {
     }
 
     public IcmsEstados getIcmsEstados() {
-        try{
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
         return icmsEstados;
     }
 
@@ -82,12 +72,6 @@ public class OrcamentoModel implements Serializable {
     }
 
     public BigDecimal getValorICMS() {
-        try{
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
-
         return valorICMS;
     }
 
@@ -96,12 +80,6 @@ public class OrcamentoModel implements Serializable {
     }
 
     public UsuarioModel getUsuario() {
-        try{
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
-
         return usuario;
     }
 
