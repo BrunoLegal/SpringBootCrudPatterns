@@ -17,6 +17,7 @@ public class OrcamentoProxy extends OrcamentoModel {
     private BigDecimal descontoOrcamento;
     private OrcamentoModel orcamentoModel;
 
+
     public OrcamentoProxy(Long id, IcmsEstados icmsEstados, BigDecimal valorOrcamento, BigDecimal valorICMS, UsuarioModel usuario, int qtdItens, BigDecimal descontoOrcamento, OrcamentoModel orcamentoModel){
         this.id = id;
         this.icmsEstados = icmsEstados;
@@ -24,6 +25,7 @@ public class OrcamentoProxy extends OrcamentoModel {
         this.valorICMS = valorICMS;
         this.usuario = usuario;
         this.qtdItens = qtdItens;
+
         this.descontoOrcamento = descontoOrcamento;
         this.orcamentoModel = orcamentoModel;
     }
