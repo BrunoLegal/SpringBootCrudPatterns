@@ -41,6 +41,13 @@ public class OrcamentoModel implements Serializable {
     @Column(name="desconto_orcamento")
     private BigDecimal descontoOrcamento;
 
+    //por garantia
+    public OrcamentoModel(BigDecimal valorOrcamento, BigDecimal descontoOrcamento, Integer qtdItens){
+        this.valorOrcamento = valorOrcamento;
+        this.descontoOrcamento = descontoOrcamento;
+        this.qtdItens = qtdItens;
+    }
+
     public Long getId() {
         return id;
     }
