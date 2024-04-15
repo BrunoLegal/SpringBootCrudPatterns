@@ -1,32 +1,34 @@
 package com.finan.orcamento.model.proxy;
 
 import com.finan.orcamento.model.OrcamentoModel;
-import com.finan.orcamento.model.UsuarioModel;
-import com.finan.orcamento.model.enums.IcmsEstados;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 
 public class OrcamentoProxy extends OrcamentoModel {
-    private final Long id;
-    private IcmsEstados icmsEstados;
     private BigDecimal valorOrcamento;
-    private BigDecimal valorICMS;
-    private UsuarioModel usuario;
-    private int qtdItens;
+    private Integer qtdItens;
     private BigDecimal descontoOrcamento;
     private OrcamentoModel orcamentoModel;
 
+    @NotNull
+    @Override
+    public BigDecimal getValorOrcamento() {
+        if(this.valorOrcamento == null){
+            this.valorOrcamento = orcamentoModel.getValorOrcamento();
+        }
+        return valorOrcamento;
+    }
 
-    public OrcamentoProxy(Long id, IcmsEstados icmsEstados, BigDecimal valorOrcamento, BigDecimal valorICMS, UsuarioModel usuario, int qtdItens, BigDecimal descontoOrcamento, OrcamentoModel orcamentoModel){
-        this.id = id;
-        this.icmsEstados = icmsEstados;
-        this.valorOrcamento = valorOrcamento;
-        this.valorICMS = valorICMS;
-        this.usuario = usuario;
-        this.qtdItens = qtdItens;
+    @Override
+    public int getQtdItens() {
+        if(this.qtdItens == null){
+            this.qtdItens = orcamentoModel.getQtdItens();
+        }
+        return qtdItens;
+    }
 
-        this.descontoOrcamento = descontoOrcamento;
+    public OrcamentoProxy(OrcamentoModel orcamentoModel){
         this.orcamentoModel = orcamentoModel;
     }
     @Override
@@ -37,6 +39,5 @@ public class OrcamentoProxy extends OrcamentoModel {
         }
         return this.descontoOrcamento;
     }
-    //construtor
 
 }
